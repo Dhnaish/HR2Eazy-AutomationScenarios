@@ -1,0 +1,104 @@
+name: HR2eazy Automation Scenarios
+
+on:
+  workflow_dispatch:
+  # schedule:
+  #   - cron: '5 4 * * *'
+
+  # push:
+  #   branches:
+  #     - main
+
+  # pull_request:
+  #   branches:
+  #     - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    env:
+      TZ: Asia/Kolkata
+
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Cache Maven dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.m2
+          key: maven-${{ hashFiles('**/pom.xml') }}
+
+      - name: Verify Timezone
+        run: |
+          echo "Current timezone:"
+          date
+          timedatectl || true
+
+      - name: Build Project
+        run: mvn clean compile
+
+      - name: Run Tests
+        run: mvn test -DsuiteXmlFile=testng.xml -Duser.timezone=Asia/Kolkata
+
+      - name: Show Extent Report Files
+        if: always()
+        run: |
+          echo "Listing Extent Report files..."
+          ls -la target/extent-reports || true
+
+      - name: Upload Extent Report
+        if: always()
+        id: upload_report
+        uses: actions/upload-artifact@v4
+        with:
+          name: Extent-Report
+          path: target/extent-reports/
+
+      - name: Send Extent Report via Email
+        if: always()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+
+          subject: HR2eazy Automation Test Report - Run #${{ github.run_number }}
+
+          to: |
+            sathishkumar@iscistech.net,
+            dhanish@iscistech.net,
+            vishnu@iscistech.net
+
+          from: ${{ secrets.EMAIL_USERNAME }}
+
+          attachments: target/extent-reports/Extentreport.html
+
+          body: |
+            Hi Team,
+
+            Automation execution has completed.
+
+            Repository:
+            https://github.com/${{ github.repository }}
+
+            Workflow Run:
+            https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+            Artifact ID:
+            ${{ steps.upload_report.outputs.artifact-id }}
+
+            Artifact Download:
+            https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+            Regards,
+            GitHub Actions
