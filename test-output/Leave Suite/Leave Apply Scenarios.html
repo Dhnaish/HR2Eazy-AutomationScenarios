@@ -1,0 +1,936 @@
+<html>
+<head>
+<title>TestNG:  Leave Apply Scenarios</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Leave Apply Scenarios</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>123/9/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Jun 05 09:18:54 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>9244 seconds (9244489 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply Public Leave based on open leave setting", "Leave Apply Modules"</td>
+<td><div><pre>java.lang.AssertionError: expected [Record deleted successfully.] but found [You must apply Annual Leave 2 days before.]
+	at pageObjectModule.LeaveApplyPage.checkValidDeleteErrorMessageForPublicRestOffDay(LeaveApplyPage.java:796)
+	at stepDefination.LeaveApplyTest.user_need_to_check_valid_error_message_for_public_rest_off_day_successful_deletion(LeaveApplyTest.java:189)
+	at ✽.User need to check valid error message for public/rest/off day successful deletion.(file:///C:/Users/ISCISNB138U/eclipse-workspace/HR2EAZY-Application/src/test/java/feature/LeaveApply.feature:16)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1264464591", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1264464591'><pre>java.lang.AssertionError: expected [Record deleted successfully.] but found [You must apply Annual Leave 2 days before.]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at pageObjectModule.LeaveApplyPage.checkValidDeleteErrorMessageForPublicRestOffDay(LeaveApplyPage.java:796)
+	at stepDefination.LeaveApplyTest.user_need_to_check_valid_error_message_for_public_rest_off_day_successful_deletion(LeaveApplyTest.java:189)
+	at ✽.User need to check valid error message for public/rest/off day successful deletion.(file:///C:/Users/ISCISNB138U/eclipse-workspace/HR2EAZY-Application/src/test/java/feature/LeaveApply.feature:16)
+</pre></div></td>
+<td>82</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply Off Day based on open leave setting", "Leave Apply Modules"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.id: ctl00_ContentPlaceHolder1_lblMsg, but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#ctl00_ContentPlaceHolder1_lblMsg&quot;}.
+(tried for 60 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.217, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\ISCISN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50982}, goog:processID: 20636, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50982/devtoo..., se:cdpVersion: 148.0.7778.217, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c8bc1150485765ebafe4fc09ee93aa6b
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at pageObjectModule.LeaveApplyPage.checkValidInvalidErrorMessage(LeaveApplyPage.java:752)
+	at stepDefination.LeaveApplyTest.user_need_to_check_valid_error_message_for_successful_leave_application(LeaveApplyTest.java:119)
+	at ✽.User need to check valid error message for successful leave application.(file:///C:/Users/ISCISNB138U/eclipse-workspace/HR2EAZY-Application/src/test/java/feature/LeaveApply.feature:34)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1476955274", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1476955274'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.id: ctl00_ContentPlaceHolder1_lblMsg, but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#ctl00_ContentPlaceHolder1_lblMsg&quot;}.
+(tried for 60 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.217, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\ISCISN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50982}, goog:processID: 20636, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50982/devtoo..., se:cdpVersion: 148.0.7778.217, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c8bc1150485765ebafe4fc09ee93aa6b
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at pageObjectModule.LeaveApplyPage.checkValidInvalidErrorMessage(LeaveApplyPage.java:752)
+	at stepDefination.LeaveApplyTest.user_need_to_check_valid_error_message_for_successful_leave_application(LeaveApplyTest.java:119)
+	at ✽.User need to check valid error message for successful leave application.(file:///C:/Users/ISCISNB138U/eclipse-workspace/HR2EAZY-Application/src/test/java/feature/LeaveApply.feature:34)
+</pre></div></td>
+<td>117</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply Off Day based on open leave setting", "Leave Apply Modules"</td>
+<td><div><pre>java.lang.AssertionError: expected [Record deleted successfully.] but found [You must apply Annual Leave 2 days before.]
+	at pageObjectModule.LeaveApplyPage.checkValidDeleteErrorMessageForPublicRestOffDay(LeaveApplyPage.java:796)
+	at stepDefination.LeaveApplyTest.user_need_to_check_valid_error_message_for_public_rest_off_day_successful_deletion(LeaveApplyTest.java:189)
+	at ✽.User need to check valid error message for public/rest/off day successful deletion.(file:///C:/Users/ISCISNB138U/eclipse-workspace/HR2EAZY-Application/src/test/java/feature/LeaveApply.feature:36)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1792634129", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1792634129'><pre>java.lang.AssertionError: expected [Record deleted successfully.] but found [You must apply Annual Leave 2 days before.]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at pageObjectModule.LeaveApplyPage.checkValidDeleteErrorMessageForPublicRestOffDay(LeaveApplyPage.java:796)
+	at stepDefination.LeaveApplyTest.user_need_to_check_valid_error_message_for_public_rest_off_day_successful_deletion(LeaveApplyTest.java:189)
+	at ✽.User need to check valid error message for public/rest/off day successful deletion.(file:///C:/Users/ISCISNB138U/eclipse-workspace/HR2EAZY-Application/src/test/java/feature/LeaveApply.feature:36)
+</pre></div></td>
+<td>84</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave Evening Session and check the half day leave applied or not, then try to applied same date half day leave and then finally delete the leave", "Leave Apply Modules"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@id=&apos;txtLanId&apos;]&quot;}
+  (Session info: chrome=148.0.7778.217)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f54dfbce209fbd4dfef949be078b499f, findElement {using=xpath, value=//input[@id=&apos;txtLanId&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.217, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\ISCISN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55913}, goog:processID: 16268, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55913/devtoo..., se:cdpVersion: 148.0.7778.217, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f54dfbce209fbd4dfef949be078b499f
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:429)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:423)
+	at pageObjectModule.LoginPage.enterUserName(LoginPage.java:46)
+	at stepDefination.LeaveApplyTest.user_enters_valid_authentication_username_and_authentication_password(LeaveApplyTest.java:47)
+	at ✽.User enters valid Authentication username and Authentication password(file:///C:/Users/ISCISNB138U/eclipse-workspace/HR2EAZY-Application/src/test/java/feature/LeaveApply.feature:4)
+</pre></div><a href='#' onClick='toggleBox("stack-trace226767388", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace226767388'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@id=&apos;txtLanId&apos;]&quot;}
+  (Session info: chrome=148.0.7778.217)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f54dfbce209fbd4dfef949be078b499f, findElement {using=xpath, value=//input[@id=&apos;txtLanId&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.217, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\ISCISN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55913}, goog:processID: 16268, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55913/devtoo..., se:cdpVersion: 148.0.7778.217, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f54dfbce209fbd4dfef949be078b499f
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:429)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:423)
+	at pageObjectModule.LoginPage.enterUserName(LoginPage.java:46)
+	at stepDefination.LeaveApplyTest.user_enters_valid_authentication_username_and_authentication_password(LeaveApplyTest.java:47)
+	at ✽.User enters valid Authentication username and Authentication password(file:///C:/Users/ISCISNB138U/eclipse-workspace/HR2EAZY-Application/src/test/java/feature/LeaveApply.feature:4)
+</pre></div></td>
+<td>156</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply Off Day based on open leave setting", "Leave Apply Modules"</td>
+<td><div><pre>java.lang.AssertionError: expected [Record deleted successfully.] but found [You can&apos;t apply medical leave for future dates.]
+	at pageObjectModule.LeaveApplyPage.checkValidDeleteErrorMessageForPublicRestOffDay(LeaveApplyPage.java:796)
+	at stepDefination.LeaveApplyTest.user_need_to_check_valid_error_message_for_public_rest_off_day_successful_deletion(LeaveApplyTest.java:189)
+	at ✽.User need to check valid error message for public/rest/off day successful deletion.(file:///C:/Users/ISCISNB138U/eclipse-workspace/HR2EAZY-Application/src/test/java/feature/LeaveApply.feature:36)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1030285139", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1030285139'><pre>java.lang.AssertionError: expected [Record deleted successfully.] but found [You can&apos;t apply medical leave for future dates.]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at pageObjectModule.LeaveApplyPage.checkValidDeleteErrorMessageForPublicRestOffDay(LeaveApplyPage.java:796)
+	at stepDefination.LeaveApplyTest.user_need_to_check_valid_error_message_for_public_rest_off_day_successful_deletion(LeaveApplyTest.java:189)
+	at ✽.User need to check valid error message for public/rest/off day successful deletion.(file:///C:/Users/ISCISNB138U/eclipse-workspace/HR2EAZY-Application/src/test/java/feature/LeaveApply.feature:36)
+</pre></div></td>
+<td>74</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply Rest Day based on open leave setting", "Leave Apply Modules"</td>
+<td><div><pre>java.lang.AssertionError: expected [Record deleted successfully.] but found [You must apply Annual Leave 2 days before.]
+	at pageObjectModule.LeaveApplyPage.checkValidDeleteErrorMessageForPublicRestOffDay(LeaveApplyPage.java:796)
+	at stepDefination.LeaveApplyTest.user_need_to_check_valid_error_message_for_public_rest_off_day_successful_deletion(LeaveApplyTest.java:189)
+	at ✽.User need to check valid error message for public/rest/off day successful deletion.(file:///C:/Users/ISCISNB138U/eclipse-workspace/HR2EAZY-Application/src/test/java/feature/LeaveApply.feature:26)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace257763089", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace257763089'><pre>java.lang.AssertionError: expected [Record deleted successfully.] but found [You must apply Annual Leave 2 days before.]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at pageObjectModule.LeaveApplyPage.checkValidDeleteErrorMessageForPublicRestOffDay(LeaveApplyPage.java:796)
+	at stepDefination.LeaveApplyTest.user_need_to_check_valid_error_message_for_public_rest_off_day_successful_deletion(LeaveApplyTest.java:189)
+	at ✽.User need to check valid error message for public/rest/off day successful deletion.(file:///C:/Users/ISCISNB138U/eclipse-workspace/HR2EAZY-Application/src/test/java/feature/LeaveApply.feature:26)
+</pre></div></td>
+<td>81</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply Public Leave based on open leave setting", "Leave Apply Modules"</td>
+<td><div><pre>java.lang.AssertionError: expected [Record deleted successfully.] but found [You can&apos;t apply medical leave for future dates.]
+	at pageObjectModule.LeaveApplyPage.checkValidDeleteErrorMessageForPublicRestOffDay(LeaveApplyPage.java:796)
+	at stepDefination.LeaveApplyTest.user_need_to_check_valid_error_message_for_public_rest_off_day_successful_deletion(LeaveApplyTest.java:189)
+	at ✽.User need to check valid error message for public/rest/off day successful deletion.(file:///C:/Users/ISCISNB138U/eclipse-workspace/HR2EAZY-Application/src/test/java/feature/LeaveApply.feature:16)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1467970595", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1467970595'><pre>java.lang.AssertionError: expected [Record deleted successfully.] but found [You can&apos;t apply medical leave for future dates.]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at pageObjectModule.LeaveApplyPage.checkValidDeleteErrorMessageForPublicRestOffDay(LeaveApplyPage.java:796)
+	at stepDefination.LeaveApplyTest.user_need_to_check_valid_error_message_for_public_rest_off_day_successful_deletion(LeaveApplyTest.java:189)
+	at ✽.User need to check valid error message for public/rest/off day successful deletion.(file:///C:/Users/ISCISNB138U/eclipse-workspace/HR2EAZY-Application/src/test/java/feature/LeaveApply.feature:16)
+</pre></div></td>
+<td>80</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply normal leave and check leave applied or not and then apply same date leave and check wthether it will allow or not then delete the applied leave", "Leave Apply Modules"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //span[contains(text(),&apos;SQL&apos;)], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[contains(text(),&apos;SQL&apos;)]&quot;}.
+(tried for 60 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.217, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\ISCISN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51072}, goog:processID: 6348, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51072/devtoo..., se:cdpVersion: 148.0.7778.217, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d02f2bf8d4ba51e0383eb250f00484a1
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at pageObjectModule.GetDataPage.hitGetDataUrl(GetDataPage.java:43)
+	at stepDefination.LeaveApplyTest.hit_the_get_data_url_and_check_the_open_leave_setting(LeaveApplyTest.java:71)
+	at ✽.Hit the getData url and check the open leave setting.(file:///C:/Users/ISCISNB138U/eclipse-workspace/HR2EAZY-Application/src/test/java/feature/LeaveApply.feature:50)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1609846025", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1609846025'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //span[contains(text(),&apos;SQL&apos;)], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[contains(text(),&apos;SQL&apos;)]&quot;}.
+(tried for 60 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.217, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\ISCISN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51072}, goog:processID: 6348, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51072/devtoo..., se:cdpVersion: 148.0.7778.217, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d02f2bf8d4ba51e0383eb250f00484a1
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at pageObjectModule.GetDataPage.hitGetDataUrl(GetDataPage.java:43)
+	at stepDefination.LeaveApplyTest.hit_the_get_data_url_and_check_the_open_leave_setting(LeaveApplyTest.java:71)
+	at ✽.Hit the getData url and check the open leave setting.(file:///C:/Users/ISCISNB138U/eclipse-workspace/HR2EAZY-Application/src/test/java/feature/LeaveApply.feature:50)
+</pre></div></td>
+<td>102</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply Rest Day based on open leave setting", "Leave Apply Modules"</td>
+<td><div><pre>java.lang.AssertionError: expected [Record deleted successfully.] but found [You can&apos;t apply medical leave for future dates.]
+	at pageObjectModule.LeaveApplyPage.checkValidDeleteErrorMessageForPublicRestOffDay(LeaveApplyPage.java:796)
+	at stepDefination.LeaveApplyTest.user_need_to_check_valid_error_message_for_public_rest_off_day_successful_deletion(LeaveApplyTest.java:189)
+	at ✽.User need to check valid error message for public/rest/off day successful deletion.(file:///C:/Users/ISCISNB138U/eclipse-workspace/HR2EAZY-Application/src/test/java/feature/LeaveApply.feature:26)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace808606767", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace808606767'><pre>java.lang.AssertionError: expected [Record deleted successfully.] but found [You can&apos;t apply medical leave for future dates.]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at pageObjectModule.LeaveApplyPage.checkValidDeleteErrorMessageForPublicRestOffDay(LeaveApplyPage.java:796)
+	at stepDefination.LeaveApplyTest.user_need_to_check_valid_error_message_for_public_rest_off_day_successful_deletion(LeaveApplyTest.java:189)
+	at ✽.User need to check valid error message for public/rest/off day successful deletion.(file:///C:/Users/ISCISNB138U/eclipse-workspace/HR2EAZY-Application/src/test/java/feature/LeaveApply.feature:26)
+</pre></div></td>
+<td>80</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply Public Leave based on open leave setting", "Leave Apply Modules"</td>
+<td></td>
+<td>48</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave both session and then try to apply full day leave and check whether user can able to apply leave or not then finally delete both session leave date", "Leave Apply Modules"</td>
+<td></td>
+<td>101</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply Rest Day based on open leave setting", "Leave Apply Modules"</td>
+<td></td>
+<td>46</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply Rest Day based on open leave setting", "Leave Apply Modules"</td>
+<td></td>
+<td>58</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave and check the half day leave applied or not, if applied delete the applied half day leave", "Leave Apply Modules"</td>
+<td></td>
+<td>59</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave both session and then try to apply full day leave and check whether user can able to apply leave or not then finally delete both session leave date", "Leave Apply Modules"</td>
+<td></td>
+<td>86</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply more leave based on earn leave count", "Leave Apply Modules"</td>
+<td></td>
+<td>43</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave both session and then try to apply full day leave and check whether user can able to apply leave or not then finally delete both session leave date", "Leave Apply Modules"</td>
+<td></td>
+<td>110</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply Public Leave based on open leave setting", "Leave Apply Modules"</td>
+<td></td>
+<td>49</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply Off Day based on open leave setting", "Leave Apply Modules"</td>
+<td></td>
+<td>51</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave and check the half day leave applied or not, then try to applied same date half day leave and then finally delete the leave", "Leave Apply Modules"</td>
+<td></td>
+<td>84</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave evening session and check the half day leave applied or not, if applied delete the applied half day leave", "Leave Apply Modules"</td>
+<td></td>
+<td>66</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply Public Leave based on open leave setting", "Leave Apply Modules"</td>
+<td></td>
+<td>40</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply normal leave and check leave applied or not, if applied delete the applied leave", "Leave Apply Modules"</td>
+<td></td>
+<td>63</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply normal leave and check leave applied or not, if applied delete the applied leave", "Leave Apply Modules"</td>
+<td></td>
+<td>57</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply Off Day based on open leave setting", "Leave Apply Modules"</td>
+<td></td>
+<td>57</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply normal leave and check leave applied or not, if applied delete the applied leave", "Leave Apply Modules"</td>
+<td></td>
+<td>62</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply Public Leave based on open leave setting", "Leave Apply Modules"</td>
+<td></td>
+<td>50</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply more leave based on earn leave count", "Leave Apply Modules"</td>
+<td></td>
+<td>60</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave evening session and check the half day leave applied or not, if applied delete the applied half day leave", "Leave Apply Modules"</td>
+<td></td>
+<td>70</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply normal leave and check leave applied or not, if applied delete the applied leave", "Leave Apply Modules"</td>
+<td></td>
+<td>71</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply normal leave and check leave applied or not and then apply same date leave and check wthether it will allow or not then delete the applied leave", "Leave Apply Modules"</td>
+<td></td>
+<td>77</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply normal leave and check leave applied or not, if applied delete the applied leave", "Leave Apply Modules"</td>
+<td></td>
+<td>64</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave and check the half day leave applied or not, then try to applied same date half day leave and then finally delete the leave", "Leave Apply Modules"</td>
+<td></td>
+<td>77</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave Evening Session and check the half day leave applied or not, then try to applied same date half day leave and then finally delete the leave", "Leave Apply Modules"</td>
+<td></td>
+<td>82</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave evening session and check the half day leave applied or not, if applied delete the applied half day leave", "Leave Apply Modules"</td>
+<td></td>
+<td>61</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply more leave based on earn leave count", "Leave Apply Modules"</td>
+<td></td>
+<td>57</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply Public Leave based on open leave setting", "Leave Apply Modules"</td>
+<td></td>
+<td>57</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave evening session and check the half day leave applied or not, if applied delete the applied half day leave", "Leave Apply Modules"</td>
+<td></td>
+<td>64</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply normal leave and check leave applied or not and then apply same date leave and check wthether it will allow or not then delete the applied leave", "Leave Apply Modules"</td>
+<td></td>
+<td>72</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply normal leave and check leave applied or not and then apply same date leave and check wthether it will allow or not then delete the applied leave", "Leave Apply Modules"</td>
+<td></td>
+<td>75</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave Evening Session and check the half day leave applied or not, then try to applied same date half day leave and then finally delete the leave", "Leave Apply Modules"</td>
+<td></td>
+<td>77</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave both session and then try to apply full day leave and check whether user can able to apply leave or not then finally delete both session leave date", "Leave Apply Modules"</td>
+<td></td>
+<td>93</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply normal leave and check leave applied or not, if applied delete the applied leave", "Leave Apply Modules"</td>
+<td></td>
+<td>52</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply Public Leave based on open leave setting", "Leave Apply Modules"</td>
+<td></td>
+<td>59</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave and check the half day leave applied or not, then try to applied same date half day leave and then finally delete the leave", "Leave Apply Modules"</td>
+<td></td>
+<td>71</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply Rest Day based on open leave setting", "Leave Apply Modules"</td>
+<td></td>
+<td>43</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply normal leave and check leave applied or not and then apply same date leave and check wthether it will allow or not then delete the applied leave", "Leave Apply Modules"</td>
+<td></td>
+<td>69</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply normal leave and check leave applied or not and then apply same date leave and check wthether it will allow or not then delete the applied leave", "Leave Apply Modules"</td>
+<td></td>
+<td>66</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply Rest Day based on open leave setting", "Leave Apply Modules"</td>
+<td></td>
+<td>53</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave Evening Session and check the half day leave applied or not, then try to applied same date half day leave and then finally delete the leave", "Leave Apply Modules"</td>
+<td></td>
+<td>72</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply normal leave and check leave applied or not, if applied delete the applied leave", "Leave Apply Modules"</td>
+<td></td>
+<td>84</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave Evening Session and check the half day leave applied or not, then try to applied same date half day leave and then finally delete the leave", "Leave Apply Modules"</td>
+<td></td>
+<td>78</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply Off Day based on open leave setting", "Leave Apply Modules"</td>
+<td></td>
+<td>49</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave and check the half day leave applied or not, if applied delete the applied half day leave", "Leave Apply Modules"</td>
+<td></td>
+<td>74</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave both session and then try to apply full day leave and check whether user can able to apply leave or not then finally delete both session leave date", "Leave Apply Modules"</td>
+<td></td>
+<td>100</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply normal leave and check leave applied or not, if applied delete the applied leave", "Leave Apply Modules"</td>
+<td></td>
+<td>64</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply normal leave and check leave applied or not and then apply same date leave and check wthether it will allow or not then delete the applied leave", "Leave Apply Modules"</td>
+<td></td>
+<td>58</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply Rest Day based on open leave setting", "Leave Apply Modules"</td>
+<td></td>
+<td>47</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply Rest Day based on open leave setting", "Leave Apply Modules"</td>
+<td></td>
+<td>59</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave Evening Session and check the half day leave applied or not, then try to applied same date half day leave and then finally delete the leave", "Leave Apply Modules"</td>
+<td></td>
+<td>88</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply normal leave and check leave applied or not, if applied delete the applied leave", "Leave Apply Modules"</td>
+<td></td>
+<td>67</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply normal leave and check leave applied or not, if applied delete the applied leave", "Leave Apply Modules"</td>
+<td></td>
+<td>63</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave both session and then try to apply full day leave and check whether user can able to apply leave or not then finally delete both session leave date", "Leave Apply Modules"</td>
+<td></td>
+<td>92</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply Rest Day based on open leave setting", "Leave Apply Modules"</td>
+<td></td>
+<td>53</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave and check the half day leave applied or not, if applied delete the applied half day leave", "Leave Apply Modules"</td>
+<td></td>
+<td>75</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave and check the half day leave applied or not, then try to applied same date half day leave and then finally delete the leave", "Leave Apply Modules"</td>
+<td></td>
+<td>73</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply Public Leave based on open leave setting", "Leave Apply Modules"</td>
+<td></td>
+<td>49</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply normal leave and check leave applied or not and then apply same date leave and check wthether it will allow or not then delete the applied leave", "Leave Apply Modules"</td>
+<td></td>
+<td>88</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave and check the half day leave applied or not, if applied delete the applied half day leave", "Leave Apply Modules"</td>
+<td></td>
+<td>57</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave evening session and check the half day leave applied or not, if applied delete the applied half day leave", "Leave Apply Modules"</td>
+<td></td>
+<td>180</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply normal leave and check leave applied or not, if applied delete the applied leave", "Leave Apply Modules"</td>
+<td></td>
+<td>57</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave evening session and check the half day leave applied or not, if applied delete the applied half day leave", "Leave Apply Modules"</td>
+<td></td>
+<td>61</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply more leave based on earn leave count", "Leave Apply Modules"</td>
+<td></td>
+<td>48</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply more leave based on earn leave count", "Leave Apply Modules"</td>
+<td></td>
+<td>37</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave evening session and check the half day leave applied or not, if applied delete the applied half day leave", "Leave Apply Modules"</td>
+<td></td>
+<td>78</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave evening session and check the half day leave applied or not, if applied delete the applied half day leave", "Leave Apply Modules"</td>
+<td></td>
+<td>62</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply normal leave and check leave applied or not, if applied delete the applied leave", "Leave Apply Modules"</td>
+<td></td>
+<td>58</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave Evening Session and check the half day leave applied or not, then try to applied same date half day leave and then finally delete the leave", "Leave Apply Modules"</td>
+<td></td>
+<td>83</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply Public Leave based on open leave setting", "Leave Apply Modules"</td>
+<td></td>
+<td>44</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave and check the half day leave applied or not, if applied delete the applied half day leave", "Leave Apply Modules"</td>
+<td></td>
+<td>79</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave both session and then try to apply full day leave and check whether user can able to apply leave or not then finally delete both session leave date", "Leave Apply Modules"</td>
+<td></td>
+<td>98</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave evening session and check the half day leave applied or not, if applied delete the applied half day leave", "Leave Apply Modules"</td>
+<td></td>
+<td>61</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave and check the half day leave applied or not, if applied delete the applied half day leave", "Leave Apply Modules"</td>
+<td></td>
+<td>70</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave both session and then try to apply full day leave and check whether user can able to apply leave or not then finally delete both session leave date", "Leave Apply Modules"</td>
+<td></td>
+<td>136</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave and check the half day leave applied or not, then try to applied same date half day leave and then finally delete the leave", "Leave Apply Modules"</td>
+<td></td>
+<td>65</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave both session and then try to apply full day leave and check whether user can able to apply leave or not then finally delete both session leave date", "Leave Apply Modules"</td>
+<td></td>
+<td>95</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply more leave based on earn leave count", "Leave Apply Modules"</td>
+<td></td>
+<td>45</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave and check the half day leave applied or not, then try to applied same date half day leave and then finally delete the leave", "Leave Apply Modules"</td>
+<td></td>
+<td>76</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave evening session and check the half day leave applied or not, if applied delete the applied half day leave", "Leave Apply Modules"</td>
+<td></td>
+<td>62</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave and check the half day leave applied or not, then try to applied same date half day leave and then finally delete the leave", "Leave Apply Modules"</td>
+<td></td>
+<td>79</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply more leave based on earn leave count", "Leave Apply Modules"</td>
+<td></td>
+<td>44</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave both session and then try to apply full day leave and check whether user can able to apply leave or not then finally delete both session leave date", "Leave Apply Modules"</td>
+<td></td>
+<td>104</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply normal leave and check leave applied or not and then apply same date leave and check wthether it will allow or not then delete the applied leave", "Leave Apply Modules"</td>
+<td></td>
+<td>96</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply Off Day based on open leave setting", "Leave Apply Modules"</td>
+<td></td>
+<td>43</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply Public Leave based on open leave setting", "Leave Apply Modules"</td>
+<td></td>
+<td>47</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply normal leave and check leave applied or not and then apply same date leave and check wthether it will allow or not then delete the applied leave", "Leave Apply Modules"</td>
+<td></td>
+<td>74</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave both session and then try to apply full day leave and check whether user can able to apply leave or not then finally delete both session leave date", "Leave Apply Modules"</td>
+<td></td>
+<td>97</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply Rest Day based on open leave setting", "Leave Apply Modules"</td>
+<td></td>
+<td>56</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave Evening Session and check the half day leave applied or not, then try to applied same date half day leave and then finally delete the leave", "Leave Apply Modules"</td>
+<td></td>
+<td>75</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply more leave based on earn leave count", "Leave Apply Modules"</td>
+<td></td>
+<td>45</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave Evening Session and check the half day leave applied or not, then try to applied same date half day leave and then finally delete the leave", "Leave Apply Modules"</td>
+<td></td>
+<td>89</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave and check the half day leave applied or not, if applied delete the applied half day leave", "Leave Apply Modules"</td>
+<td></td>
+<td>76</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave and check the half day leave applied or not, then try to applied same date half day leave and then finally delete the leave", "Leave Apply Modules"</td>
+<td></td>
+<td>73</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply normal leave and check leave applied or not and then apply same date leave and check wthether it will allow or not then delete the applied leave", "Leave Apply Modules"</td>
+<td></td>
+<td>74</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave and check the half day leave applied or not, then try to applied same date half day leave and then finally delete the leave", "Leave Apply Modules"</td>
+<td></td>
+<td>71</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave Evening Session and check the half day leave applied or not, then try to applied same date half day leave and then finally delete the leave", "Leave Apply Modules"</td>
+<td></td>
+<td>83</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave and check the half day leave applied or not, if applied delete the applied half day leave", "Leave Apply Modules"</td>
+<td></td>
+<td>73</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply more leave based on earn leave count", "Leave Apply Modules"</td>
+<td></td>
+<td>36</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply Off Day based on open leave setting", "Leave Apply Modules"</td>
+<td></td>
+<td>42</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply more leave based on earn leave count", "Leave Apply Modules"</td>
+<td></td>
+<td>58</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave and check the half day leave applied or not, then try to applied same date half day leave and then finally delete the leave", "Leave Apply Modules"</td>
+<td></td>
+<td>72</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply Off Day based on open leave setting", "Leave Apply Modules"</td>
+<td></td>
+<td>49</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply Public Leave based on open leave setting", "Leave Apply Modules"</td>
+<td></td>
+<td>56</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave evening session and check the half day leave applied or not, if applied delete the applied half day leave", "Leave Apply Modules"</td>
+<td></td>
+<td>61</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply Off Day based on open leave setting", "Leave Apply Modules"</td>
+<td></td>
+<td>51</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave and check the half day leave applied or not, if applied delete the applied half day leave", "Leave Apply Modules"</td>
+<td></td>
+<td>70</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave and check the half day leave applied or not, then try to applied same date half day leave and then finally delete the leave", "Leave Apply Modules"</td>
+<td></td>
+<td>83</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply Off Day based on open leave setting", "Leave Apply Modules"</td>
+<td></td>
+<td>68</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply more leave based on earn leave count", "Leave Apply Modules"</td>
+<td></td>
+<td>47</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply Off Day based on open leave setting", "Leave Apply Modules"</td>
+<td></td>
+<td>47</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave and check the half day leave applied or not, if applied delete the applied half day leave", "Leave Apply Modules"</td>
+<td></td>
+<td>65</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave Evening Session and check the half day leave applied or not, then try to applied same date half day leave and then finally delete the leave", "Leave Apply Modules"</td>
+<td></td>
+<td>81</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave evening session and check the half day leave applied or not, if applied delete the applied half day leave", "Leave Apply Modules"</td>
+<td></td>
+<td>53</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave and check the half day leave applied or not, if applied delete the applied half day leave", "Leave Apply Modules"</td>
+<td></td>
+<td>55</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply Rest Day based on open leave setting", "Leave Apply Modules"</td>
+<td></td>
+<td>50</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave and check the half day leave applied or not, if applied delete the applied half day leave", "Leave Apply Modules"</td>
+<td></td>
+<td>75</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply more leave based on earn leave count", "Leave Apply Modules"</td>
+<td></td>
+<td>43</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply Rest Day based on open leave setting", "Leave Apply Modules"</td>
+<td></td>
+<td>47</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User apply normal leave and check leave applied or not and then apply same date leave and check wthether it will allow or not then delete the applied leave", "Leave Apply Modules"</td>
+<td></td>
+<td>75</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave Evening Session and check the half day leave applied or not, then try to applied same date half day leave and then finally delete the leave", "Leave Apply Modules"</td>
+<td></td>
+<td>74</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave and check the half day leave applied or not, then try to applied same date half day leave and then finally delete the leave", "Leave Apply Modules"</td>
+<td></td>
+<td>82</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+<tr>
+<td title='runner.LeaveApplyTestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.LeaveApplyTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User try to apply half day leave both session and then try to apply full day leave and check whether user can able to apply leave or not then finally delete both session leave date", "Leave Apply Modules"</td>
+<td></td>
+<td>93</td>
+<td>runner.LeaveApplyTestRunner@17a7f733</td></tr>
+</table><p>
+</body>
+</html>
