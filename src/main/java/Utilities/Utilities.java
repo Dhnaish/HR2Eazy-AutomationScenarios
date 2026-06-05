@@ -10,7 +10,7 @@ public class Utilities {
 	public static Properties getProperty() throws IOException {
 
 		prop = new Properties();
-		FileInputStream file = new FileInputStream("src\\test\\resources\\config.properties");
+		FileInputStream file = new FileInputStream("src/test/resources/config.properties");
 		prop.load(file);
 		return prop;
 	}
