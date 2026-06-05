@@ -46,7 +46,7 @@ jobs:
         run: mvn clean compile
 
       - name: Run Tests
-        run: mvn test -DsuiteXmlFile=testng.xml -Duser.timezone=Asia/Kolkata
+        run: mvn clean test -Dsurefire.suiteXmlFiles=testng.xml -Duser.timezone=Asia/Kolkata
 
       - name: Show Extent Report Files
         if: always()
